@@ -2,17 +2,49 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Microsoft cloud sandbox",
+            "name": "Sandbox",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "sandbox",
-            "startupObjectId": 22,
+            "environmentName": "Sandbox",
+            "applicationFamily": "LSCentral",
+            "server": "https://lscentral.bc.dynamics.com/polder.se",
+            "serverInstance": "faf39c75-7273-4a08-ad9a-85e35b41937e",
             "startupObjectType": "Page",
-            "breakOnError": "All",
+            "breakOnError": true,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true
+        },
+        {
+            "name": "AL: Generated Snapshot request",
+            "request": "snapshotInitialize",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox",
+            "sessionId": 212338,
+            "breakOnNext": "WebClient",
+            "executionContext": "DebugAndProfile",
+            "tenant": "faf39c75-7273-4a08-ad9a-85e35b41937e"
+        },
+        {
+            "name": "AL: Generated Attach request",
+            "request": "attach",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox",
+            "sessionId": 212338,
+            "breakOnNext": "WebClient",
+            "breakOnError": "ExcludeTry",
+            "tenant": "faf39c75-7273-4a08-ad9a-85e35b41937e"
+        },
+        {
+            "name": "AL: Generated Download Symbols request",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox",
+            "tenant": "faf39c75-7273-4a08-ad9a-85e35b41937e"
         }
     ]
 }
